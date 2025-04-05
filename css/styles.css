@@ -1,3 +1,4 @@
+
 body {
     background: #e2fffb;
     text-align: center;
@@ -56,6 +57,10 @@ h1 {
     padding : 30px;
 }
 
+h1.lowres{
+    display: none;
+}
+
 h2 {
     font-family: "Candy Round BTN", "Brush Script Std" ;
     font-size: 30pt;
@@ -79,6 +84,7 @@ h6 {
 p {
     font-family: "Motserrat", sans-serif ;
 }
+
 
 /*----------Formulario------------*/
 form {
@@ -150,4 +156,106 @@ td, th {
 /*------------Divisores--------*/
 div {
     margin: 30px 0 0 0 ;
+}
+
+/*---------SMARTPHONE MEDIA QUERY------------*/
+
+@media (max-width: 600px) {
+
+    /*------- MENU -----*/
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav > a.menu {
+        font-size: 1.4em;
+    }
+
+    header {
+        position: fixed;
+        background: #acf8ac;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+
+    /*-------TITULO---------*/
+    h1.title {
+        display: none;
+    }
+
+    h1.lowres {
+        display: contents;
+    }
+
+    /*-----FORMATO---------*/
+    p, dl {
+        padding: 0 10px;
+    }
+
+    /*-------MEDIA--------*/
+    img, video {
+        max-width: 100%;
+        height: auto;
+        padding-top: 10px;
+        margin: auto;
+    }
+}
+
+@media (max-height: 500px) {
+
+        /*------- MENU -----*/
+        .menu {
+            display: inline;
+            flex-direction: row;
+            justify-content: center;
+            z-index: 9999;
+        }
+        nav > a.menu{
+            font-size: 1.4em;
+        }
+
+        header {
+            position: fixed;
+            padding: 1.3em;
+            background: #acf8ac;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        main {
+            margin-top: 100px;
+        }
+        /*-------TITULO---------*/
+        h1.title{
+            display: none;
+        }
+
+        h1.lowres {
+            display: contents;
+        }
+
+        /*-----FORMATO---------*/
+        p, dl {
+            padding: 0 10px;
+        }
+
+        /*-------MEDIA--------*/
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            padding-top: 10px;
+            padding-top: 10px;
+            margin: auto;
+        }
 }
